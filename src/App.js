@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import MyCount from "./MyComponent/MyCount";
+import EventPractice from "./MyComponent/EventPractice";
 
 function App() {
   return (
-    <MyCount></MyCount>
+    <EventPractice/>
   );
 }
 

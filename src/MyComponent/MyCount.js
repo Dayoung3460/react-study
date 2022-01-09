@@ -15,10 +15,14 @@ class MyCount extends Component {
 
     return (
       <div>
-        {number}
+        {number}<br/>
         {fixedNumber}
         <button onClick={() => {
-          this.setState({number: number + 1})
+          this.setState({number: number + 1},
+            () => {
+            console.log('callback')
+            })
+
         }}>+1</button>
       </div>
     );
