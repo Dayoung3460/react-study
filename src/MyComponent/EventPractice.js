@@ -1,55 +1,61 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 
-class EventPractice extends Component {
-  state = {
-    message: '',
-    username: ''
-  }
+const MyComponent = () => {
+  const [form, setForm] = useState({
+    username: '',
+    message: ''
+  })
 
-  handleChange = (e) => {
-    const name = 'variantKey'
-    const object = {
-      [name]: 'value'
-    }
-    console.log(object)
+  const {username, message} = form
 
-
-    this.setState({
+  const handleOnChange1 = (e) => {
+    const nextForm = {
+      ...form,
       [e.target.name]: e.target.value
+    }
+    setForm(nextForm)
+  }
+
+
+  const handleOnClick = () => {
+    alert(username + ': ' + message)
+    setForm({
+      username: '',
+      message: ''
     })
   }
 
-  handleClick = () => {
-    alert(this.state.username + ': ' + this.state.message)
-    this.setState({
-      message: '',
-      username: ''
-    })
+  const handleKeyPress = (e) => {
+    if(e.key === 'Enter') {
+      handleOnClick()
+    }
   }
 
+  return (
+    <div>
+      <p>event Practice</p>
+      <input
+        type="text"
+        name="username"
+        onChange={handleOnChange1}
+        placeholder="Enter username"
+        value={username}
+      />
+      <input
+        type="text"
+        name="message"
+        placeholder="Enter Message you want to say"
+        onChange={handleOnChange1}
+        onKeyPress={handleKeyPress}
+        value={message}
+      />
+      <button
+        onClick={handleOnClick}
+      >
+        check
+      </button>
+    </div>
+  );
+};
 
-  render() {
-    return (
-      <div>
-        <p>event practice</p>
-        <input
-          type="text"
-          name="username"
-          placeholder="user name"
-          value={this.state.username}
-          onChange={this.handleChange}
-        />
-        <input
-          type="text"
-          name="message"
-          placeholder="Enter anything"
-          value={this.state.message}
-          onChange={this.handleChange}
-        />
-        <button onClick={this.handleClick}>check</button>
-      </div>
-    );
-  }
-}
-
-export default EventPractice;
+export default MyComponent;
