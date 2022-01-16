@@ -10,9 +10,9 @@ const MyComponent = () => {
 
   const [input, setInput] = useState('')
   const [nextId, setNextId] = useState(5)
-  const nameList = name.map((name, idx) => {
-    return <li key={name.id}>{name.text}</li>
-  })
+  const nameList = name.map(name => (
+    <li key={name.id} onDoubleClick={() => onRemove(name.id)}>{name.text}</li>
+  ))
 
   const onChange = e => {
     setInput(e.target.value)
@@ -27,14 +27,25 @@ const MyComponent = () => {
     setInput('')
   }
 
+  const onRemove = (id) => {
+    const filteredNames = name.filter(name => {
+      return name.id !== id
+    })
+    setNames(filteredNames)
+  }
+
   return (
     <div>
       <input
         value={input}
         onChange={onChange}
       />
-      <button onClick={onClick}>Add</button>
-      <ul>{nameList}</ul>
+      <button
+        onClick={onClick}
+      >Add</button>
+      <ul>
+        {nameList}
+      </ul>
     </div>
   );
 };
