@@ -10,7 +10,7 @@ const App = () => {
   // const [visible, setVisible] = useState(false)
   return (
     <div>
-      <Counter/>
+      <Info/>
     </div>
   )
 }
