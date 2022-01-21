@@ -5,12 +5,12 @@ const Info = () => {
   const [nickname, setNickname] = useState('')
 
   useEffect(() => {
-    console.log('render only when mounted')
+    console.log(name)
     console.log({
       name,
       nickname
     })
-  }, [])
+  }, [name])
 
   const onChangeName = e => {
     setName(e.target.value)
