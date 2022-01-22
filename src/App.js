@@ -7,12 +7,13 @@ import Counter from "./MyComponent/Counter";
 import Info from "./MyComponent/Info";
 import Average from "./MyComponent/Average";
 import SassComponent from "./MyComponent/SassComponent";
+import CSSModule from "./MyComponent/CSSModule";
 
 const App = () => {
   // const [visible, setVisible] = useState(false)
   return (
     <div>
-      <SassComponent/>
+      <CSSModule/>
     </div>
   )
 }
