@@ -11,7 +11,7 @@ const App = () => {
   // const [visible, setVisible] = useState(false)
   return (
     <div>
-      <Average/>
+      <Info/>
     </div>
   )
 }
