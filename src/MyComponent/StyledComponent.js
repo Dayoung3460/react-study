@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 const Box = styled.div`
   background: ${props => props.color || 'blue'};
   padding: 1rem;
-  disdplay: flex;
+  display: flex;
   `;
 
 const Button = styled.button`
@@ -34,7 +34,8 @@ const Button = styled.button`
               color: black;
             }
           `
-};
+  };
+  
   & + button {
     margin-left: 1rem;
   }
