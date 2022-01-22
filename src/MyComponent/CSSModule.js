@@ -6,7 +6,7 @@ const cx = classNames.bind(styles)
 
 const CSSModule = () => {
   return (
-    <div className={cx('wrapper', 'invented')}>
+    <div className={cx('wrapper', 'inverted')}>
       hi I am <span className="something">CSS Module</span>
     </div>
   );

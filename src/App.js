@@ -8,12 +8,13 @@ import Info from "./MyComponent/Info";
 import Average from "./MyComponent/Average";
 import SassComponent from "./MyComponent/SassComponent";
 import CSSModule from "./MyComponent/CSSModule";
+import StyledComponent from "./MyComponent/StyledComponent";
 
 const App = () => {
   // const [visible, setVisible] = useState(false)
   return (
     <div>
-      <CSSModule/>
+      <StyledComponent/>
     </div>
   )
 }
