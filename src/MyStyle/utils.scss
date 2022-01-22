@@ -1,0 +1,13 @@
+$red: #fa5252;
+$orange: #f39c12;
+$yellow: #f1c40f;
+$green: #27ae60;
+$blue: #2980b9;
+$indigo: #4B0082;
+$violet: #b57edc;
+
+@mixin square($size) {
+  $calculated: 32px * $size;
+  width: $calculated;
+  height: $calculated;
+}
