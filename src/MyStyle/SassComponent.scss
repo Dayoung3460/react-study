@@ -1,0 +1,51 @@
+$red: #fa5252;
+$orange: #f39c12;
+$yellow: #f1c40f;
+$green: #27ae60;
+$blue: #2980b9;
+$indigo: #4B0082;
+$violet: #b57edc;
+
+@mixin square($size) {
+  $calculated: 32px * $size;
+  width: $calculated;
+  height: $calculated;
+}
+
+.SassComponent {
+  display: flex;
+    .box {
+      background: red;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+      &.red {
+        background: $red;
+        @include square(1)
+      }
+      &.orange {
+        background: $orange;
+        @include square(2)
+      }
+      &.yellow {
+        background: $yellow;
+        @include square(3)
+      }
+      &.green {
+        background: $green;
+        @include square(4)
+      }
+      &.blue {
+        background: $blue;
+        @include square(5)
+      }
+      &.indigo {
+        background: $indigo;
+        @include square(6)
+      }
+      &.violet {
+        background: $violet;
+        @include square(7)
+      }
+    }
+}
+

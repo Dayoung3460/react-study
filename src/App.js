@@ -6,12 +6,13 @@ import ErrorBoundary from "./MyComponent/ErrorBoundary";
 import Counter from "./MyComponent/Counter";
 import Info from "./MyComponent/Info";
 import Average from "./MyComponent/Average";
+import SassComponent from "./MyComponent/SassComponent";
 
 const App = () => {
   // const [visible, setVisible] = useState(false)
   return (
     <div>
-      <Info/>
+      <SassComponent/>
     </div>
   )
 }
