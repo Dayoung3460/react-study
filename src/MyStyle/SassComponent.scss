@@ -1,4 +1,6 @@
-@import 'utils';
+// config/webpack.config.js: additionalData: "@import 'utils';"
+// 모든 scss 파일에서 utils.scss를 불러옴
+//@import 'utils';
 
 //$red: #fa5252;
 //$orange: #f39c12;
@@ -16,6 +18,10 @@
 
 .SassComponent {
   display: flex;
+  background: $oc-gray-2;
+  @include media('<768px') {
+    background: $oc-gray-9
+  }
     .box {
       background: red;
       cursor: pointer;
