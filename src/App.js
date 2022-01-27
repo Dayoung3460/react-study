@@ -9,12 +9,14 @@ import Average from "./MyComponent/Average";
 import SassComponent from "./MyComponent/SassComponent";
 import CSSModule from "./MyComponent/CSSModule";
 import StyledComponent from "./MyComponent/StyledComponent";
+import UseReducer from "./MyComponent/UseReducer";
+
 
 const App = () => {
   // const [visible, setVisible] = useState(false)
   return (
     <div>
-      <StyledComponent/>
+      <UseReducer></UseReducer>
     </div>
   )
 }
